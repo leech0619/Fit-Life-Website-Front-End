@@ -1,0 +1,450 @@
+.body {
+    overflow-x: hidden;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.our-team-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.our-team-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/ourteamheader.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  z-index: 1;
+  animation: fadeIn 1s ease-out;
+}
+
+.our-team-section-bg {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 135px;
+  padding: 80px 40px;
+  width: 100%;
+  border-top-right-radius: 10px;
+  animation: fadeIn-up 1s ease-out;
+}
+
+@keyframes fadeIn-up {
+    from { bottom: -50px; opacity: 0.5; }
+    to { bottom : 0px; opacity: 1; }
+}
+
+.our-team-section-detail {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.our-team-section-detail h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.our-team-section-detail p {
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+
+.our-mission-section {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh; 
+    width: 100%;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.5s;
+    animation-play-state: paused;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0.5;}
+    to {opacity: 1;}
+}
+
+.our-mission-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../images/ourmissionsection.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: 0;
+}
+
+.our-mission-section-title {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    z-index: 1;
+    padding: 5vh 5vw; 
+    width: 100%; 
+    text-align: center;
+    animation: fadeIn-left 1s ease-in-out;
+    animation-play-state: paused;
+}
+
+@keyframes fadeIn-left {
+    from { left: -200px; opacity: 0.25; }
+    to { left : 0px; opacity: 1; }
+}
+
+.our-mission-section-title h2 {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url("../images/ourmissionsection.jpg");
+    background-size: cover;
+    background-position: center;
+    font-size: 3rem; 
+    font-weight: 700;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.our-mission-section-desc {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    padding: 5vh 5vw; 
+    width: 100%; 
+    animation: fadeIn-right 1s ease-in-out;
+    animation-play-state: paused;
+}
+
+@keyframes fadeIn-right {
+    from { right: -200px; opacity: 0.25; }
+    to { right : 0px; opacity: 1; }
+}
+
+.our-mission-section-desc p {
+    font-size: 1.25rem; 
+    color: whitesmoke;
+    max-width: 600px;
+    margin: 0 auto; 
+    line-height: 1.5;
+}
+
+@media only screen and (min-width: 769px) {
+    .our-mission-section {
+        flex-direction: row; 
+    }
+
+    .our-mission-section::before {
+        height: 100vh; 
+    }
+
+    .our-mission-section-title,
+    .our-mission-section-desc {
+        width: 50%; 
+        height: 100vh; 
+    }
+
+    .our-mission-section-title h2 {
+        font-size: 6.5rem; 
+    }
+
+    .our-mission-section-desc p {
+        font-size: 1.75rem; 
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .our-mission-section-title h2 {
+        font-size: 3rem; 
+    }
+
+    .our-mission-section-desc p {
+        font-size: 1rem; 
+    }
+}
+
+.our-core-value {
+    padding: 20px;
+    background-color: black;
+    border-top: 1px solid #cccccc;
+}
+
+.our-core-value h1 {
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: whitesmoke;
+    font-weight: bolder;
+    animation: fadeIn-up 1.25s ease-in-out;
+    animation-play-state: paused;
+}
+
+.our-core-value h2 {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    color: whitesmoke;
+    margin-bottom: 15px;
+    font-weight: bold;
+    animation: fadeIn-up 1.5s ease-in-out;
+    animation-play-state: paused;
+}
+
+.our-core-value-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.our-core-value-detail p {
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    text-align: center; /* Center the title */
+}
+
+.our-core-value-detail > div {
+    padding: 10px;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    margin-bottom: 20px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content vertically */
+    text-align: center; /* Center the text horizontally */
+}
+
+.our-core-value-detail .right1,
+.our-core-value-detail .right2 {
+    align-self: flex-end;
+}
+
+.our-core-value-detail .left {
+    align-self: flex-start;
+}
+
+.our-core-value-detail .right1 {
+    animation: fadeIn-up-core 1.75s ease-in-out;
+    animation-play-state: paused;
+}
+
+.our-core-value-detail .left {
+    animation: fadeIn-up-core 2s ease-in-out;
+    animation-play-state: paused;
+}
+
+.our-core-value-detail .right2 {
+    animation: fadeIn-up-core 2.25s ease-in-out;
+    animation-play-state: paused;
+}
+
+@keyframes fadeIn-up-core {
+    from { bottom: -50px; opacity: 0; }
+    to { bottom : 0px; opacity: 1; }
+}
+
+.team-member-section {
+    background-color: black;
+}
+
+.container {
+    justify-content: center;
+}
+
+.container h1 {
+    padding-top: 50px;
+    font-weight: bolder;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.team-member-section h1 {
+    position: relative;
+    color: whitesmoke;
+    animation: fadeIn-up-core 1.25s ease-in-out;
+    animation-play-state: paused;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-description {
+    position: relative;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    animation: fadeIn-up-core 1.5s ease-in-out;
+    animation-play-state: paused;
+}
+
+.team-member {
+    position: relative;
+    background-color: rgba(51, 51, 51, 0.579);
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px 2.5px rgba(152, 152, 152, 0.47);
+    height: 500px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 65px;
+    animation: fadeIn-up-core 1.75s ease-in-out;
+    animation-play-state: paused;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member-details {
+    display: none;
+}
+
+.team-member img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 0 auto 10px;
+    border-style: outset;
+    border-color: #656565;
+    border-width: 5px;
+}
+
+.team-member h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+
+.team-member p {
+    font-size: 1.2rem;
+    color: whitesmoke;
+}
+
+@media only screen and (max-width: 480px) {
+    .team-member-content {
+        align-items: center;
+        justify-content: center;
+        padding-right: 75px;
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.detail-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(27, 27, 27);
+    box-shadow: 0 0 10px 2.5px rgba(82, 82, 82, 0.47);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 80%;
+    max-height: 80vh;
+    overflow-y: auto;
+    transition: opacity 0.25s ease;
+    overflow: hidden;
+}
+
+.detail-content img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    align-items: end;
+    border-style: outset;
+    border-color: #656565;
+    border-width: 5px;
+}
+
+.detail-content h2 {
+    margin-top: 0;
+    color: whitesmoke;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.detail-content p {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    border: none;
+    right: 10px;
+    font-size: 36px;
+    cursor: pointer;
+    color: white;
+}
+
+.close-btn:hover {
+    color: #a6a6a6; /* Darker color on hover (optional) */
+}
+
+.fade-in {
+    animation: fadeIn 0.5s;
+}
+
+.fade-out {
+    opacity: 0;
+    animation: fadeOut 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+} 
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
